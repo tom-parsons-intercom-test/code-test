@@ -1,0 +1,41 @@
+{
+  // config options: https://basarat.gitbooks.io/typescript/docs/project/tsconfig.html
+  "compilerOptions": {
+    // Basic Options
+    "target": "es2015",
+    "jsx": "react",
+    "declaration": true,
+
+    // Strict Type-Checking Options
+    "strict": true,
+    "strictNullChecks": true,
+
+    // Module Resolution Options
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./native",
+    "paths": {
+      "*": ["*", "*/src"]
+    },
+    "typeRoots": [ "node_modules/@types", "./index.d.ts", "./generated/types/webTypes.d.ts" ],
+
+    // Additional Checks
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // Experimental Options
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    // React Native
+    "skipLibCheck": true,
+
+    "sourceMap": true,
+  },
+  "exclude": [
+    "node_modules",
+    "src/static"
+  ]
+}
